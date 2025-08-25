@@ -1,3 +1,180 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Print Styles for Clean PDF Export */
+@media print {
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Hide interactive elements in print */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Main container adjustments */
+  .print-container {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  /* Header styling for print */
+  .print-header {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    border-bottom: 2px solid #000 !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .print-header h1 {
+    font-size: 24pt !important;
+    font-weight: bold !important;
+    margin-bottom: 0.5rem !important;
+    color: black !important;
+  }
+
+  .print-header p {
+    font-size: 11pt !important;
+    color: #666 !important;
+    margin: 0 !important;
+  }
+
+  /* Results section for print */
+  .print-results {
+    margin: 2rem 0 !important;
+    padding: 1.5rem !important;
+    border: 2px solid #000 !important;
+    background: #f8f9fa !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-results h2 {
+    font-size: 18pt !important;
+    font-weight: bold !important;
+    margin-bottom: 1rem !important;
+    color: black !important;
+    text-align: center !important;
+  }
+
+  .print-salary-main {
+    text-align: center !important;
+    margin: 1.5rem 0 !important;
+  }
+
+  .print-salary-amount {
+    font-size: 28pt !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .print-salary-range {
+    font-size: 14pt !important;
+    color: #333 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .print-salary-label {
+    font-size: 11pt !important;
+    color: #666 !important;
+  }
+
+  /* Summary section for print */
+  .print-summary {
+    margin: 2rem 0 !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-summary h3 {
+    font-size: 14pt !important;
+    font-weight: bold !important;
+    margin-bottom: 1rem !important;
+    color: black !important;
+  }
+
+  .print-summary-content {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    padding: 1rem !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 10pt !important;
+    line-height: 1.6 !important;
+    white-space: pre-wrap !important;
+  }
+
+  /* Footer for print */
+  .print-footer {
+    margin-top: 3rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid #ccc !important;
+    text-align: center !important;
+    font-size: 9pt !important;
+    color: #666 !important;
+  }
+
+  /* Hide grid layout in print, use single column */
+  .print-single-column {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Input section for print - show as summary table */
+  .print-inputs {
+    margin: 1.5rem 0 !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-inputs h3 {
+    font-size: 14pt !important;
+    font-weight: bold !important;
+    margin-bottom: 1rem !important;
+    color: black !important;
+  }
+
+  .print-input-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .print-input-table td {
+    padding: 0.5rem !important;
+    border-bottom: 1px solid #ddd !important;
+    font-size: 11pt !important;
+  }
+
+  .print-input-table td:first-child {
+    font-weight: bold !important;
+    width: 40% !important;
+  }
+
+  /* Ensure proper page breaks */
+  .page-break-before {
+    page-break-before: always !important;
+  }
+
+  .page-break-after {
+    page-break-after: always !important;
+  }
+
+  .page-break-avoid {
+    page-break-inside: avoid !important;
+  }
+}
