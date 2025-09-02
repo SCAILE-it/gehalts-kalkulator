@@ -8,6 +8,7 @@ export const roles: Role[] = [
   { key: "fullstack", label: "Full-Stack" },
   { key: "devops", label: "DevOps / SRE" },
   { key: "data", label: "Data (Engineer/Scientist)" },
+  { key: "java", label: "Java-Entwickler:in" },
 ];
 
 export const countries: Country[] = [
@@ -58,6 +59,7 @@ export const baseDE: Record<RoleKey, SalaryData> = {
   fullstack: { junior: 46000, mid: 62000, senior: 78000, lead: 92000 },
   devops: { junior: 50000, mid: 70000, senior: 85000, lead: 100000 },
   data: { junior: 48000, mid: 68000, senior: 82000, lead: 95000 },
+  java: { junior: 52500, mid: 67500, senior: 82500, lead: 100000 }, // Data from Melina (co-founder NS)
 };
 
 // Country multipliers vs. DE baseline

@@ -42,6 +42,6 @@ export interface CalculationResult {
 
 export type ExperienceLevel = 'junior' | 'mid' | 'senior' | 'lead';
 export type CountryCode = 'DE' | 'AT' | 'CH';
-export type RoleKey = 'backend' | 'frontend' | 'fullstack' | 'devops' | 'data';
+export type RoleKey = 'backend' | 'frontend' | 'fullstack' | 'devops' | 'data' | 'java';
 export type CompanySizeKey = 'startup' | 'sme' | 'enterprise';
 export type ContractKey = 'perm' | 'contractor';
